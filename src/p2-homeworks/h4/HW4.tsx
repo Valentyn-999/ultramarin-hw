@@ -12,6 +12,7 @@ function HW4() {
             alert("введите текст...");
         } else {
             alert(text); // если нет ошибки показать текст
+            setText('')
         }
     }
 
@@ -21,7 +22,7 @@ function HW4() {
     return (
         <div>
             <hr/>
-            homeworks 4
+            <div className={s.title}>Homework 4</div>
 
             <div className={s.column}>
                 {/*should work (должно работать)*/}
@@ -53,11 +54,6 @@ function HW4() {
                 <SuperCheckbox checked={checked} onChange={testOnChange}/>
             </div>
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperInputText/>*/}
-            {/*<AlternativeSuperButton/>*/}
-            {/*<AlternativeSuperCheckbox/>*/}
             <hr/>
         </div>
     );

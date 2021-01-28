@@ -2,34 +2,54 @@ import React, {useState} from "react";
 import Affairs from "./Affairs";
 
 // types
-export type AffairPriorityType = any; // need to fix any
-export type AffairType = any; // need to fix any
+export type DefaultAffairType ={
+    id: number
+    name: string
+    priority: AffairPriorityType
+}
+export type AffairPriorityType = "high" | "middle" | "low"; // need to fix any
+export type AffairType = DefaultAffairType; // need to fix any
 export type FilterType = "all" | AffairPriorityType;
 
 // constants
-const defaultAffairs: any = [ // need to fix any
-    {_id: 1, name: "React", priority: "high"},
-    {_id: 2, name: "anime", priority: "low"},
-    {_id: 3, name: "games", priority: "low"},
-    {_id: 4, name: "work", priority: "high"},
-    {_id: 5, name: "html & css", priority: "middle"},
+const defaultAffairs: Array<DefaultAffairType> = [ // need to fix any
+    {id: 1, name: "React", priority: "high"},
+    {id: 2, name: "anime", priority: "low"},
+    {id: 3, name: "games", priority: "low"},
+    {id: 4, name: "work", priority: "high"},
+    {id: 5, name: "html & css", priority: "middle"},
 ];
 
 // pure helper functions
-export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
-    if (filter === "all") return affairs;
-    else return; // need to fix
+export const filterAffairs = (affairs: Array<DefaultAffairType>, filter: FilterType): Array<DefaultAffairType> => { // need to fix any
+    if (filter === "all") {
+        return affairs;
+    }
+    if (filter === "middle") {
+        return affairs.filter(af => af.priority === "middle")
+    }
+    if (filter === "low") {
+        return affairs.filter(af => af.priority === "low")
+    }
+    if (filter === "high") {
+        return affairs.filter(af => af.priority === "high");
+    }
+    else return affairs;// need to fix
 }
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
-    return; // need to fix
+export const deleteAffair = (affairs: Array<DefaultAffairType>, id: number): Array<DefaultAffairType> => { // need to fix any
+    return affairs.filter(af => af.id !== id)
 }
 
 function HW2() {
-    const [affairs, setAffairs] = useState<any>(defaultAffairs); // need to fix any
+
+    // let filter = setKokot[0]
+    // let setFilter = setKokot[1]
+
+    const [affairs, setAffairs] = useState<Array<DefaultAffairType>>(defaultAffairs); // need to fix any
     const [filter, setFilter] = useState<FilterType>("all");
 
     const filteredAffairs = filterAffairs(affairs, filter);
-    const deleteAffairCallback = (_id: any) => setAffairs(deleteAffair(affairs, _id)); // need to fix any
+    const deleteAffairCallback = (id: number) => setAffairs(deleteAffair(affairs, id)); // need to fix any
 
     return (
         <div>
@@ -43,7 +63,7 @@ function HW2() {
                 deleteAffairCallback={deleteAffairCallback}
             />
 
-            <hr/>
+
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeAffairs/>*/}
             <hr/>
