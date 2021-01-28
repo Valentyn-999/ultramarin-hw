@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import GreetingContainer from "./GreetingContainer";
-import {v1} from "uuid";
 import s from "./HW3.module.css";
+import {v1} from "uuid";
 
 
 // types
