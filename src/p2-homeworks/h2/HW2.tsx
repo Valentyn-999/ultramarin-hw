@@ -52,7 +52,7 @@ function HW2() {
     const deleteAffairCallback = (id: number) => setAffairs(deleteAffair(affairs, id)); // need to fix any
 
     return (
-        <div>
+        <div >
             <hr/>
             homeworks 2
 

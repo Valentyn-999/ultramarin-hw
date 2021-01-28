@@ -1,0 +1,47 @@
+.header_nave_links {
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pre_junior {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.pre_junior_nav {
+    font-size: 20px;
+    text-decoration: none;
+}
+.pre_junior_nav:hover {
+    color: blue;
+    opacity: .5;
+    transition: .2s ease;
+}
+.junior {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.junior_nav {
+    font-size: 20px;
+    text-decoration: none;
+}
+.junior_nav:hover {
+    color: blue;
+    opacity: .5;
+    transition: .2s ease;
+}
+.junior_plus {
+    margin-top: 10px;
+}
+.junior_plus_nav {
+    font-size: 20px;
+    text-decoration: none;
+}
+.junior_plus_nav:hover {
+    color: blue;
+    opacity: .5;
+    transition: .2s ease;
+}
+.active {
+    color: #4CAF50;
+}

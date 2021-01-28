@@ -1,17 +1,22 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { PATH } from "./Routes";
+import {NavLink} from "react-router-dom";
+import s from './Header.module.css'
 
 function Header() {
+    debugger
     return (
-        <div>
-            <NavLink to={PATH.PRE_JUNIOR}>PRE_JUNIOR</NavLink>
-            <NavLink to={PATH.hw1}>hw1</NavLink>
-            <NavLink to={PATH.hw2}>hw2</NavLink>
-            <NavLink to={PATH.hw3}>hw3</NavLink>
-            <NavLink to={PATH.hw4}>hw4</NavLink>
+        <div className={s.header_nave_links}>
+            <div className={s.pre_junior}>
+                <NavLink className={s.pre_junior_nav} activeClassName={s.active} to={'/pre-junior'}>PRE-JUNIOR</NavLink>
+            </div>
+            <div className={s.junior}>
+                <NavLink className={s.junior_nav} activeClassName={s.active} to={'/junior'}>JUNIOR</NavLink>
+            </div>
+            <div className={s.junior_plus}>
+                <NavLink className={s.junior_plus_nav} activeClassName={s.active} to={'/junior-plus'}>JUNIOR-PLUS</NavLink>
+            </div>
 
-            // add NavLinks
+            {/*// add NavLinks*/}
 
         </div>
     );
