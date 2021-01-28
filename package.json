@@ -2,7 +2,7 @@
   "name": "ultramarin-hw",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://Valentyn-999.github.io/ultramarin-hw",
+  "homepage": "https://Valentyn-999.github.io/ultramarin-hw",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -12,6 +12,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.7",
+    "deploy": "^1.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
