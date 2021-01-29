@@ -3,7 +3,6 @@ import {NavLink} from "react-router-dom";
 import s from './Header.module.css'
 
 function Header() {
-    debugger
     return (
         <div className={s.header_nave_links}>
             <div className={s.pre_junior}>
