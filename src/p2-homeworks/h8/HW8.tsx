@@ -11,16 +11,25 @@ const initialPeople = [
     {_id: 5, name: "Ирина", age: 55},
 ]
 
+export type initialPeopleType = {
+    _id: number
+    name: string
+    age: number
+}
+
 function HW8() {
     const [people, setPeople] = useState(initialPeople);
 
-    const finalPeople = people.map(p => (
+    const finalPeople = people.map((p:initialPeopleType) => (
         <div key={p._id}>
-            some name, age
+            {p.name} {p.age}
+            {/*some name, age*/}
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "up"}))
+    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "up"} ))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "down"}))
+    const check18 = () => setPeople(homeWorkReducer(initialPeople, {type: "check", payload: 18}))
 
     return (
         <div>
@@ -31,16 +40,17 @@ function HW8() {
 
             {finalPeople}
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
+            <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+            <div><SuperButton onClick={check18}>check 18</SuperButton></div>
 
-            check 18
+            {/*check 18*/}
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativePeople/>*/}
-            <hr/>
+            {/*<hr/>*/}
+            {/*/!*для личного творчества, могу проверить*!/*/}
+            {/*/!*<AlternativePeople/>*!/*/}
+            {/*<hr/>*/}
         </div>
-    );
+    )
 }
 
 export default HW8;
