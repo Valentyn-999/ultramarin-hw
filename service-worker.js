@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ultramarin-hw/precache-manifest.930bc3e6bdb2427c590984d6b5be84dc.js"
+  "/ultramarin-hw/precache-manifest.dba5b7512cee90c97e167632187b4a0a.js"
 );
 
 self.addEventListener('message', (event) => {
